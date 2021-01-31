@@ -944,8 +944,8 @@ make debugging easier in case of regressions.</p>
 shouldn't notice any changes, but in case this leads to problems all of it can
 be disabled/reverted via linker flags:</p>
 <ul>
-<li>mingw64: <code>-Wl,--disable-dynamicbase,--disable-high-entropy-va,--disable-nxcompat,--default-image-base-low</code></li>
-<li>mingw32: <code>-Wl,--disable-dynamicbase,--disable-nxcompat</code></li>
+<li>mingw64: <code>-Wl,--disable-dynamicbase,--disable-high-entropy-va,--default-image-base-low</code></li>
+<li>mingw32: <code>-Wl,--disable-dynamicbase</code></li>
 </ul>
 <p>Note that this is only a temporary workaround and some of these flags will not
 be available forever, so you should either fix your code or file a bug in case
