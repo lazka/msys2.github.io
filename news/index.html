@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Software Distribution and Building Platform for Windows">
+      
       
       
       
@@ -48,6 +50,38 @@
       
     
     
+   
+  
+    
+  
+<meta property="og:type" content="website" />
+<meta property="og:title" content="MSYS2 - News" />
+<meta property="og:description" content="Important events happening." />
+
+<meta property="og:url" content="https://www.msys2.org/news/" />
+<meta property="og:image" content="https://www.msys2.org/logo.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="250" />
+<meta property="og:image:height" content="250" />
+<script type="application/ld+json">
+  {
+    "image": "https://www.msys2.org/logo.png",
+    "@type": "WebSite",
+    "headline": "MSYS2",
+    "publisher": {
+      "@type": "Organization",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.msys2.org/logo.png"
+      }
+    },
+    "url": "https://www.msys2.org",
+    "description": "Software Distribution and Building Platform for Windows",
+    "name": "MSYS2",
+    "@context": "https://schema.org"
+  }
+</script>
+
   </head>
   
   
@@ -243,6 +277,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2021-01-31-aslr-enabled-by-default" class="md-nav__link">
+    2021-01-31 - ASLR enabled by default
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#2020-10-08-main-repo-pruned" class="md-nav__link">
@@ -522,7 +563,7 @@
 
   <li class="md-nav__item">
     <a href="../wiki/Home/" class="md-nav__link">
-      Home
+      Welcome to the MSYS2 wiki
     </a>
   </li>
 
@@ -561,7 +602,7 @@
 
   <li class="md-nav__item">
     <a href="../wiki/Devtopics/" class="md-nav__link">
-      Devtopics
+      TODO LIST
     </a>
   </li>
 
@@ -600,7 +641,7 @@
 
   <li class="md-nav__item">
     <a href="../wiki/GDB-qtcreator/" class="md-nav__link">
-      GDB qtcreator
+      Qt Creator
     </a>
   </li>
 
@@ -613,7 +654,7 @@
 
   <li class="md-nav__item">
     <a href="../wiki/History/" class="md-nav__link">
-      History
+      MSYS2 History
     </a>
   </li>
 
@@ -626,7 +667,7 @@
 
   <li class="md-nav__item">
     <a href="../wiki/How-does-MSYS2-differ-from-Cygwin/" class="md-nav__link">
-      How does MSYS2 differ from Cygwin
+      How does MSYS2 differ from Cygwin?
     </a>
   </li>
 
@@ -639,7 +680,7 @@
 
   <li class="md-nav__item">
     <a href="../wiki/Launchers/" class="md-nav__link">
-      Launchers
+      Lauchers
     </a>
   </li>
 
@@ -652,7 +693,7 @@
 
   <li class="md-nav__item">
     <a href="../wiki/MSYS2-installation/" class="md-nav__link">
-      MSYS2 installation
+      MSYS2-Installation
     </a>
   </li>
 
@@ -665,7 +706,7 @@
 
   <li class="md-nav__item">
     <a href="../wiki/MSYS2-introduction/" class="md-nav__link">
-      MSYS2 introduction
+      MSYS2-Introduction
     </a>
   </li>
 
@@ -678,7 +719,7 @@
 
   <li class="md-nav__item">
     <a href="../wiki/MSYS2-reinstallation/" class="md-nav__link">
-      MSYS2 reinstallation
+      Re-installing MSYS2
     </a>
   </li>
 
@@ -691,7 +732,7 @@
 
   <li class="md-nav__item">
     <a href="../wiki/Packages/" class="md-nav__link">
-      Packages
+      Packages List
     </a>
   </li>
 
@@ -730,7 +771,7 @@
 
   <li class="md-nav__item">
     <a href="../wiki/Signing-packages/" class="md-nav__link">
-      Signing packages
+      Signing Packages
     </a>
   </li>
 
@@ -743,7 +784,7 @@
 
   <li class="md-nav__item">
     <a href="../wiki/Sudo/" class="md-nav__link">
-      Sudo
+      Do you need Sudo?
     </a>
   </li>
 
@@ -789,6 +830,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2021-01-31-aslr-enabled-by-default" class="md-nav__link">
+    2021-01-31 - ASLR enabled by default
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#2020-10-08-main-repo-pruned" class="md-nav__link">
@@ -885,6 +933,27 @@
                 
                 
                 <h1 id="news">News</h1>
+<h3 id="2021-01-31-aslr-enabled-by-default">2021-01-31 - ASLR enabled by default</h3>
+<p><strong>Backstory:</strong> About 5 months ago we started backporting patches to our binutils
+2.35 to allow enabling ASLR support via various flags. We also enabled these
+flags in our build system, so any package in our repo that was updated in the
+last 5 months has ASLR support enabled. We've now updated to 2.36 which in
+theory has ASLR enabled by default but have reverted the defaults for now to
+make debugging easier in case of regressions.</p>
+<p><strong>Next steps:</strong> In the coming days we will enable ASLR for everyone by default.
+Ideally you shouldn't notice any of it, but in case this leads to problems all
+of it can be disabled/reverted via linker flags:</p>
+<ul>
+<li>mingw64: <code>-Wl,--disable-dynamicbase,--disable-high-entropy-va,--disable-nxcompat,--default-image-base-low</code></li>
+<li>mingw32: <code>-Wl,--disable-dynamicbase,--disable-nxcompat</code></li>
+</ul>
+<p>Note that this is only a workaround and some of these flags will not be
+available forever, so you should either fix your code or file a bug in case you
+suspect a toolchain issue.</p>
+<p>Thanks to the binutils developers for improving/fixing ASRL support and to
+everyone helping on the MSYS2 side of things, especially <a href="https://github.com/jeremyd2019">Jeremy
+Drake</a> for backporting, upstreaming and fixing
+bugs exposed by these changes.</p>
 <h3 id="2020-10-08-main-repo-pruned">2020-10-08 - main repo pruned</h3>
 <p>Due to limited space on the new server and SourceForge file hosting, we are
 starting to remove older unused packages from the archives.  There should still
@@ -1021,6 +1090,8 @@ issues with the i686 variant.  Run
 <p>The function of <code>update-core</code> is transferred to <code>pacman -Syuu</code>.</p>
 <h3 id="2016-command-window-may-linger-after-startup">2016 - Command window may linger after startup</h3>
 <p>Change the argument <code>/K</code> to <code>/C</code> in all three Start menu shortcuts.</p>
+                
+                  
                 
               
               

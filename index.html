@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Software Distribution and Building Platform for Windows">
+      
       
       
       
@@ -48,6 +50,36 @@
       
     
     
+   
+  
+<meta property="og:type" content="website" />
+<meta property="og:title" content="MSYS2" />
+<meta property="og:description" content="Software Distribution and Building Platform for Windows" />
+
+<meta property="og:url" content="https://www.msys2.org/" />
+<meta property="og:image" content="https://www.msys2.org/logo.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="250" />
+<meta property="og:image:height" content="250" />
+<script type="application/ld+json">
+  {
+    "image": "https://www.msys2.org/logo.png",
+    "@type": "WebSite",
+    "headline": "MSYS2",
+    "publisher": {
+      "@type": "Organization",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.msys2.org/logo.png"
+      }
+    },
+    "url": "https://www.msys2.org",
+    "description": "Software Distribution and Building Platform for Windows",
+    "name": "MSYS2",
+    "@context": "https://schema.org"
+  }
+</script>
+
   </head>
   
   
@@ -266,6 +298,13 @@
           <li class="md-nav__item">
   <a href="#ray-donnelly-mingwandroid" class="md-nav__link">
     Ray Donnelly (@mingwandroid)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#christoph-reiter-lazka" class="md-nav__link">
+    Christoph Reiter (@lazka)
   </a>
   
 </li>
@@ -489,7 +528,7 @@
 
   <li class="md-nav__item">
     <a href="wiki/Home/" class="md-nav__link">
-      Home
+      Welcome to the MSYS2 wiki
     </a>
   </li>
 
@@ -528,7 +567,7 @@
 
   <li class="md-nav__item">
     <a href="wiki/Devtopics/" class="md-nav__link">
-      Devtopics
+      TODO LIST
     </a>
   </li>
 
@@ -567,7 +606,7 @@
 
   <li class="md-nav__item">
     <a href="wiki/GDB-qtcreator/" class="md-nav__link">
-      GDB qtcreator
+      Qt Creator
     </a>
   </li>
 
@@ -580,7 +619,7 @@
 
   <li class="md-nav__item">
     <a href="wiki/History/" class="md-nav__link">
-      History
+      MSYS2 History
     </a>
   </li>
 
@@ -593,7 +632,7 @@
 
   <li class="md-nav__item">
     <a href="wiki/How-does-MSYS2-differ-from-Cygwin/" class="md-nav__link">
-      How does MSYS2 differ from Cygwin
+      How does MSYS2 differ from Cygwin?
     </a>
   </li>
 
@@ -606,7 +645,7 @@
 
   <li class="md-nav__item">
     <a href="wiki/Launchers/" class="md-nav__link">
-      Launchers
+      Lauchers
     </a>
   </li>
 
@@ -619,7 +658,7 @@
 
   <li class="md-nav__item">
     <a href="wiki/MSYS2-installation/" class="md-nav__link">
-      MSYS2 installation
+      MSYS2-Installation
     </a>
   </li>
 
@@ -632,7 +671,7 @@
 
   <li class="md-nav__item">
     <a href="wiki/MSYS2-introduction/" class="md-nav__link">
-      MSYS2 introduction
+      MSYS2-Introduction
     </a>
   </li>
 
@@ -645,7 +684,7 @@
 
   <li class="md-nav__item">
     <a href="wiki/MSYS2-reinstallation/" class="md-nav__link">
-      MSYS2 reinstallation
+      Re-installing MSYS2
     </a>
   </li>
 
@@ -658,7 +697,7 @@
 
   <li class="md-nav__item">
     <a href="wiki/Packages/" class="md-nav__link">
-      Packages
+      Packages List
     </a>
   </li>
 
@@ -697,7 +736,7 @@
 
   <li class="md-nav__item">
     <a href="wiki/Signing-packages/" class="md-nav__link">
-      Signing packages
+      Signing Packages
     </a>
   </li>
 
@@ -710,7 +749,7 @@
 
   <li class="md-nav__item">
     <a href="wiki/Sudo/" class="md-nav__link">
-      Sudo
+      Do you need Sudo?
     </a>
   </li>
 
@@ -798,6 +837,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#christoph-reiter-lazka" class="md-nav__link">
+    Christoph Reiter (@lazka)
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -853,8 +899,10 @@ MSYS2 and what for.</p>
 <h2 id="installation">Installation</h2>
 <ol>
 <li>
-<p>Download the installer: <a href="https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20201109.exe" class="button">msys2-x86_64-20201109.exe</a></p>
-<p><span style="opacity: 0.6;">SHA256 checksum: <code>274a11559ede8b892da63dacab30dcf968b811fe21caccc9a1fb9137a5e56062</code></span></p>
+<p>Download the installer: <a href="https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20210105.exe" class="button">msys2-x86_64-20210105.exe</a></p>
+<p><span style="opacity: 0.6;">Verify with SHA256 checksum <code>c6cbaad7f3e939ec9024ed6a6a36b027bff2cc2785d36985ce2f8efe1fa81883</code>
+or <a href="https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20210105.exe.sig">GPG signature</a>
+by <a href="http://keyserver.ubuntu.com/pks/lookup?search=0x0ebf782c5d53f7e5fb02a66746bd761f7a49b0ec&amp;fingerprint=on&amp;op=vindex">0xf7a49b0ec</a>.</span></p>
 </li>
 <li>
 <p>Run the installer. MSYS2 requires 64 bit Windows 7 or newer.</p>
@@ -1024,23 +1072,24 @@ Total Installed Size:  1254.96 MiB
 </ul>
 <h2 id="donations">Donations</h2>
 <h4 id="alexey-pavlov-alexpux">Alexey Pavlov (<a href="https://github.com/alexpux">@alexpux</a>)</h4>
-<p>Webmoney transfer to the following webmoney wallets:</p>
 <ul>
-<li>E271473533800</li>
-<li>R691797957081</li>
-<li>Z110171850957</li>
+<li>WebMoney transfer to the following WebMoney wallets:<ul>
+<li><code>E271473533800</code></li>
+<li><code>R691797957081</code></li>
+<li><code>Z110171850957</code></li>
 </ul>
-<p>To Paypal account: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#108;&#101;&#120;&#112;&#117;&#120;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#97;&#108;&#101;&#120;&#112;&#117;&#120;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
-<p>To yandex.money: 41001429355429</p>
+</li>
+<li>PayPal: <a href="https://www.paypal.com/donate/?business=alexpux%40gmail.com">alexpux@gmail.com</a></li>
+<li>Yandex.Money: <code>41001429355429</code></li>
+</ul>
 <h4 id="ray-donnelly-mingwandroid">Ray Donnelly (<a href="https://github.com/mingwandroid">@mingwandroid</a>)</h4>
-<p>PayPal:</p>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-              <input type="hidden" name="cmd" value="_s-xclick">
-              <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
-                ">
-              <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal – The safer, easier way to pay online." border="0">
-              <img alt="" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" style="display: none !important;" width="1" hidden="" height="1" border="0">
-</form>
+<ul>
+<li>PayPal: <a href="https://www.paypal.com/donate/?business=ray.donnelly%40gmail.com&amp;item_name=Ray+Donnelly+MSYS2+development+donation&amp;currency_code=GBP">ray.donnelly@gmail.com</a></li>
+</ul>
+<h4 id="christoph-reiter-lazka">Christoph Reiter (<a href="https://github.com/lazka">@lazka</a>)</h4>
+<ul>
+<li>GitHub Sponsors: <a href="https://github.com/sponsors/lazka">https://github.com/sponsors/lazka</a></li>
+</ul>
                 
               
               
