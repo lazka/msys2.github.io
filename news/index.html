@@ -940,17 +940,17 @@ flags in our build system, so any package in our repo that was updated in the
 last 5 months has ASLR support enabled. We've now updated to 2.36 which in
 theory has ASLR enabled by default but have reverted the defaults for now to
 make debugging easier in case of regressions.</p>
-<p><strong>Next steps:</strong> In the coming days we will enable ASLR for everyone by default.
-Ideally you shouldn't notice any of it, but in case this leads to problems all
-of it can be disabled/reverted via linker flags:</p>
+<p><strong>Next steps:</strong> In the coming days we will enable ASLR by default. Ideally you
+shouldn't notice any changes, but in case this leads to problems all of it can
+be disabled/reverted via linker flags:</p>
 <ul>
 <li>mingw64: <code>-Wl,--disable-dynamicbase,--disable-high-entropy-va,--disable-nxcompat,--default-image-base-low</code></li>
 <li>mingw32: <code>-Wl,--disable-dynamicbase,--disable-nxcompat</code></li>
 </ul>
-<p>Note that this is only a workaround and some of these flags will not be
-available forever, so you should either fix your code or file a bug in case you
-suspect a toolchain issue.</p>
-<p>Thanks to the binutils developers for improving/fixing ASRL support and to
+<p>Note that this is only a temporary workaround and some of these flags will not
+be available forever, so you should either fix your code or file a bug in case
+you suspect a toolchain issue.</p>
+<p>Thanks to the binutils developers for improving/fixing ASLR support and to
 everyone helping on the MSYS2 side of things, especially <a href="https://github.com/jeremyd2019">Jeremy
 Drake</a> for backporting, upstreaming and fixing
 bugs exposed by these changes.</p>
