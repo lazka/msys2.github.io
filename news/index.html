@@ -954,6 +954,13 @@ you suspect a toolchain issue.</p>
 everyone helping on the MSYS2 side of things, especially <a href="https://github.com/jeremyd2019">Jeremy
 Drake</a> for backporting, upstreaming and fixing
 bugs exposed by these changes.</p>
+<p><strong>Known issues:</strong></p>
+<ul>
+<li>In case you are seeing errors such as <code>relocation truncated to fit:
+  IMAGE_REL_AMD64_REL32 against undefined symbol</code> try building with
+  <code>-Wl,--default-image-base-low</code>. Here is the upstream bug report:
+  <a href="https://sourceware.org/bugzilla/show_bug.cgi?id=26659">https://sourceware.org/bugzilla/show_bug.cgi?id=26659</a></li>
+</ul>
 <h3 id="2020-10-08-main-repo-pruned">2020-10-08 - main repo pruned</h3>
 <p>Due to limited space on the new server and SourceForge file hosting, we are
 starting to remove older unused packages from the archives.  There should still
