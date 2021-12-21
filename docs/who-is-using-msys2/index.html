@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://www.msys2.org/docs/who-is-using-msys2/">
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.6">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
     
     
       
@@ -22,10 +22,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.875de78c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.802231af.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
         
           
           
@@ -48,6 +48,8 @@
     
     
       
+
+
     
     
    
@@ -147,14 +149,18 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -392,6 +398,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cmake/" class="md-nav__link">
+        Using CMake in MSYS2
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -428,7 +446,7 @@
   
     <li class="md-nav__item">
       <a href="../../dev/mirrors/" class="md-nav__link">
-        Creating a Mirror
+        Mirrors
       </a>
     </li>
   
@@ -441,6 +459,18 @@
     <li class="md-nav__item">
       <a href="../../dev/keyring/" class="md-nav__link">
         MSYS2 Keyring
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/python/" class="md-nav__link">
+        Python
       </a>
     </li>
   
@@ -788,18 +818,30 @@
                 
                 <h1 id="who-is-using-msys2">Who Is Using MSYS2?</h1>
 <ul>
-<li><a href="https://gitforwindows.org/">Git for Windows</a> is based on MSYS2</li>
-<li><a href="https://www.r-project.org/">The R Project</a> build system <a href="https://cran.r-project.org/bin/windows/Rtools">rtools40</a> is based on MSYS2 icw/ a custom repository of <a href="https://github.com/r-windows/rtools-packages">mingw packages</a> (all statically linked).</li>
-<li><a href="https://quodlibet.readthedocs.io">Quod Libet</a> uses MSYS2 for its Windows
-  build and for CI</li>
-<li><a href="https://inkscape.org">Inkscape</a> uses MSYS2 for its Windows releases and for CI (<a href="https://wiki.inkscape.org/wiki/index.php?title=Compiling_Inkscape_on_Windows_with_MSYS2">Documentation</a>)</li>
-<li><a href="https://openpaper.work">Paperwork</a> uses MSYS2 for its Windows releases and for CI (<a href="https://gitlab.gnome.org/World/OpenPaperwork/paperwork/-/blob/master/doc/devel.windows.markdown">Documentation</a>)</li>
-<li><a href="https://github.com/m-ab-s/media-autobuild_suite">Media-autobuild_suite</a> uses MSYS2 for automatically building FFmpeg and other media related tools</li>
-<li><a href="https://github.com/UrusTeam/urusstudio_installer">UrusStudio Installer</a> uses MSYS2 for building and running Urus Studio IDE and URUS System.</li>
-<li><a href="https://github.com/keepassxreboot/keepassxc">KeePassXC</a> uses MSYS2 for building and running KeePassXC password manager.</li>
 <li><a href="https://gaphor.org">Gaphor</a> uses MSYS2 for its Windows releases and for CI</li>
-<li><a href="https://openmodelica.org/">OpenModelica</a> uses MSYS2 for building the OpenModelica tools and compiling the generated simulation code on Windows.</li>
+<li><a href="https://gitforwindows.org/">Git for Windows</a> is based on MSYS2</li>
+<li><a href="https://quodlibet.readthedocs.io">Quod Libet</a> uses MSYS2 for its Windows build and for CI</li>
+<li><a href="https://github.com/hdl/MINGW-packages">HDL/MINGW-packages</a> uses MSYS2 for building and testing open source Electronic Design Automation (EDA) tools.</li>
+<li><a href="https://github.com/ghdl/ghdl">ghdl/ghdl</a> uses MSYS2 for building, packaging and testing GHDL.<ul>
+<li><a href="https://github.com/ghdl/setup-ghdl-ci">ghdl/setup-ghdl-ci</a> uses setup-msys2 for users to run GHDL on GitHub Actions' Windows environments.</li>
+<li><a href="https://github.com/ghdl/extended-tests">ghdl/extended-tests</a> uses setup-msys2 and setup-ghdl-ci for testing third-party projects with GHDL on GitHub Actions' Windows environments.</li>
+</ul>
+</li>
+<li><a href="https://github.com/gtkwave/gtkwave">gtkwave/gtkwave</a> uses MSYS2 for building and packaging GTKWave.</li>
+<li><a href="https://github.com/steveicarus/iverilog">steveicarus/iverilog</a> uses MSYS2 for building, packaging and testing Icarus Verilog.</li>
+<li><a href="https://github.com/trabucayre/openFPGALoader">trabucayre/openFPGALoader</a> uses MSYS2 for building, packaging and testing openFPGALoader.</li>
+<li><a href="https://github.com/azonenberg/scopehal-apps">azonenberg/scopehal-apps</a> uses MSYS2 for building libscopehal, glscopeclient and other client applications for libscopehal.</li>
+<li><a href="https://github.com/Serial-Studio/Serial-Studio">Serial-Studio/Serial-Studio</a> uses MSYS2 for building and testing Serial Studio.</li>
+<li><a href="https://github.com/VUnit/vunit">VUnit/vunit</a> uses MSYS2 for testing VUnit.</li>
+<li><a href="https://inkscape.org">Inkscape</a> uses MSYS2 for its Windows releases and for CI (<a href="https://wiki.inkscape.org/wiki/index.php?title=Compiling_Inkscape_on_Windows_with_MSYS2">Documentation</a>)</li>
+<li><a href="https://github.com/keepassxreboot/keepassxc">KeePassXC</a> uses MSYS2 for building and running KeePassXC password manager.</li>
+<li><a href="https://github.com/m-ab-s/media-autobuild_suite">Media-autobuild_suite</a> uses MSYS2 for automatically building FFmpeg and other media related tools</li>
 <li><a href="https://nuwen.net/mingw.html">Nuwen's MinGW Build</a> uses MSYS2 to build the files.</li>
+<li><a href="https://openmodelica.org/">OpenModelica</a> uses MSYS2 for building the OpenModelica tools and compiling the generated simulation code on Windows.</li>
+<li><a href="https://openpaper.work">Paperwork</a> uses MSYS2 for its Windows releases and for CI (<a href="https://gitlab.gnome.org/World/OpenPaperwork/paperwork/-/blob/master/doc/devel.windows.markdown">Documentation</a>)</li>
+<li><a href="https://www.r-project.org/">The R Project</a> build system <a href="https://cran.r-project.org/bin/windows/Rtools">rtools40</a> is based on MSYS2 icw/ a custom repository of <a href="https://github.com/r-windows/rtools-packages">mingw packages</a> (all statically linked).</li>
+<li><a href="https://github.com/UrusTeam/urusstudio_installer">UrusStudio Installer</a> uses MSYS2 for building and running Urus Studio IDE and URUS System.</li>
+<li><a href="https://github.com/cyberbotics/webots">Webots</a> uses MSYS2 to build Webots on Windows and for CI.</li>
 </ul>
 <p><em>Feel free to add your project to this list!</em></p>
                 
@@ -822,7 +864,8 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../what-is-msys2/" class="md-footer__link md-footer__link--prev" rel="prev">
+        
+        <a href="../what-is-msys2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: What is MSYS2?" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -837,7 +880,8 @@
         </a>
       
       
-        <a href="../environments/" class="md-footer__link md-footer__link--next" rel="next">
+        
+        <a href="../environments/" class="md-footer__link md-footer__link--next" aria-label="Next: Environments" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -903,10 +947,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.34eae1b6.min.js"></script>
+      <script src="../../assets/javascripts/bundle.756773cc.min.js"></script>
       
     
   </body>
