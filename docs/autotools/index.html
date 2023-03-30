@@ -19,7 +19,7 @@
         <link rel="next" href="../python/">
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.0">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.4">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.402914a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.240905d7.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -706,6 +706,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pkgconfig/" class="md-nav__link">
+        pkg-config
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -888,6 +902,20 @@
     <li class="md-nav__item">
       <a href="../../dev/python/" class="md-nav__link">
         Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/build-process/" class="md-nav__link">
+        Automated Build Process
       </a>
     </li>
   
@@ -1357,7 +1385,7 @@ pacman<span class="w"> </span>-S<span class="w"> </span>autotools<span class="w"
 <div class="highlight"><pre><span></span><code><span class="nv">WANT_AUTOMAKE</span><span class="o">=</span><span class="s1">&#39;1.15&#39;</span><span class="w"> </span>autoreconf<span class="w"> </span>-fvi
 </code></pre></div>
 <h3 id="autoconf-wrapper">autoconf wrapper</h3>
-<p>The <a href="https://packages.msys2.org/package/autoconf-wrapper">autoconf wrapper</a> defaults to the newest autoconf version. You can select an older version via the <code>WANT_AUTOCONF</code> env var.</p>
+<p>By default the <a href="https://packages.msys2.org/package/autoconf-wrapper">autoconf wrapper</a> will detect the right version based on existing generated files and things will just work. You can also force a different version via the <code>WANT_AUTOCONF</code> env var, and the newest available version via <code>WANT_AUTOCONF=latest</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="nv">WANT_AUTOCONF</span><span class="o">=</span><span class="s1">&#39;2.69&#39;</span><span class="w"> </span>autoreconf<span class="w"> </span>-fvi
 </code></pre></div>
 <p>These wrappers are developed by <a href="https://devmanual.gentoo.org/general-concepts/autotools/index.html">Gentoo Linux</a> and are also used in Cygwin.</p>
@@ -1460,7 +1488,7 @@ pacman<span class="w"> </span>-S<span class="w"> </span>autotools<span class="w"
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "content.action.edit", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ce72ebac.min.js"></script>
+      <script src="../../assets/javascripts/bundle.19047be9.min.js"></script>
       
     
   </body>
