@@ -1314,7 +1314,7 @@
 </li>
 <li>
 <p>autoconf bugs: The stricter defaults in clang v16 exposed some autoconf bugs
-  which leads to some compiler checks returning the wrong results. We have
+  which lead to some compiler checks returning the wrong results. We have
   backported the respective fixes into all our autoconf versions (2.13, 2.69 and
   2.71) and updated autoconf-archive, but this means you will have to run
   autoreconf to get those fixes. There is also a chance that other checks in
@@ -1323,7 +1323,7 @@
 </li>
 <li>
 <p>fortran/flang: flang, the llvm based Fortran compiler, is now capable of
-  building some of our Fortran based packages, but despite that it still has
+  building some of our Fortran based packages. But despite that, it still has
   known issues of generating wrong or broken code without warnings and should
   not be used in production. The same is true for all Fortran based packages we
   are building with it.</p>
