@@ -447,7 +447,7 @@
   
     <li class="md-nav__item">
       <a href="../installer/" class="md-nav__link">
-        MSYS2 Installer & Archives
+        MSYS2 Installer
       </a>
     </li>
   
@@ -1397,12 +1397,12 @@
 <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;nt&quot;</span> <span class="ow">and</span> <span class="n">sysconfig</span><span class="o">.</span><span class="n">get_platform</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;mingw&quot;</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cpython-mingw detected!&quot;</span><span class="p">)</span>
 </code></pre></div>
+<p>Unlike many other Windows packages in MSYS2, Python will not look for DLL dependencies in PATH by default, but requires directories to be explicitly added via <code>os.add_dll_directory()</code> at runtime. You can disable this behavior, and make it look in PATH, by setting the <code>PYTHONLEGACYWINDOWSDLLLOADING</code> environment variable to <code>1</code>.</p>
 <h3 id="known-issues">Known issues</h3>
 <ul>
 <li>C extensions are not compatible with the official CPython, which means pip can't use binary wheels from PyPI and packages have to be build when installing them.</li>
 <li>Some C extensions don't build out of the box since they don't expect non-MSVC on Windows. In some cases we provide patched versions in our repo.</li>
 <li><a href="https://github.com/pypa/setuptools">setuptools</a> &gt;= 60.0 is currently incompatible with MSYS2. You can set <code>export SETUPTOOLS_USE_DISTUTILS=stdlib</code> to work around the issue. We are currently working on restoring compatibility.</li>
-<li>It still looks up DLLs via PATH and <code>os.add_dll_directory()</code> doesn't work, see <a href="https://github.com/msys2-contrib/cpython-mingw/issues/48">https://github.com/msys2-contrib/cpython-mingw/issues/48</a></li>
 </ul>
 
 
