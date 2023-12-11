@@ -347,8 +347,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#2023-12-10-starting-to-drop-some-32-bit-packages" class="md-nav__link">
-    2023-12-10 - Starting to drop some 32-bit Packages
+  <a href="#2023-12-11-starting-to-drop-some-32-bit-packages" class="md-nav__link">
+    2023-12-11 - Starting to drop some 32-bit Packages
   </a>
   
 </li>
@@ -2049,8 +2049,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#2023-12-10-starting-to-drop-some-32-bit-packages" class="md-nav__link">
-    2023-12-10 - Starting to drop some 32-bit Packages
+  <a href="#2023-12-11-starting-to-drop-some-32-bit-packages" class="md-nav__link">
+    2023-12-11 - Starting to drop some 32-bit Packages
   </a>
   
 </li>
@@ -2346,11 +2346,11 @@
 
 <h1 id="news">News</h1>
 <p>This page lists important changes or issues affecting MSYS2 users. We also post them to <a href="https://twitter.com/msys2org">Twitter</a> and <a href="https://fosstodon.org/@msys2org">Mastodon</a>, including some not-so-important things :)</p>
-<h3 id="2023-12-10-starting-to-drop-some-32-bit-packages">2023-12-10 - Starting to drop some 32-bit Packages</h3>
+<h3 id="2023-12-11-starting-to-drop-some-32-bit-packages">2023-12-11 - Starting to drop some 32-bit Packages</h3>
 <p>Three years ago we dropped 32-bit Windows support for running MSYS2 itself, now
 we are taking the next step and slowly starting to reduce the number of 32-bit
 mingw-w64 packages, meaning the packages for the MINGW32 and CLANG32
-environments. The goal of the phase-out is to reduce maintenance costs and CI
+environments. The goal of the phase-out is to reduce maintenance costs and server
 resources while not affecting most users. The focus will be on packages that
 aren't likely to see much use anyway, or where 64-bit alternatives are available
 and viable:</p>
@@ -2370,14 +2370,12 @@ and viable:</p>
 <li>Common and frequently used dependencies, and their dependencies (glib, ffmpeg,
   boost, ...)</li>
 </ul>
+<p>To find out if a package you have installed is affected you can run <code>pacman -Qm</code>
+which lists all installed packages which are no longer available in the repo.</p>
 <p>Ideally not many people should notice these changes, but in case they affect you:</p>
 <ul>
 <li>Switch your workflow to use 64-bit packages instead ;)</li>
-<li>In case you are packaging or building for external users:</li>
-<li>Tell us which packages that were removed you still need and for how long, so
-    we can consider reinstating them.</li>
-<li>Drop support for 32-bit and point users to the last version supporting
-    32-bit.</li>
+<li>Tell us which packages that were removed you still need, so we can consider reinstating them.</li>
 </ul>
 <p>If there are any questions, let us know <a href="https://github.com/msys2/MINGW-packages/discussions/19326">on GitHub</a>.</p>
 <p>If you are wondering if you should continue to support 32-bit Windows for your
@@ -2404,8 +2402,8 @@ users, here are some relevant resources:</p>
 </ul>
 <p>There are of course lots of applications not planning to drop support and 32-bit
 Windows is still supported for nearly 2 more years, so we understand that 32-bit
-support is still required in various cases, and we will try to keep the most
-important packages around for as long as possible.</p>
+support is still required in various cases, and we will try to keep important
+packages around for as long as possible.</p>
 <h3 id="2023-11-05-package-installation-issues-for-very-oldoutdated-installations">2023-11-05 - Package installation issues for very old/outdated installations</h3>
 <p>If you haven't updated pacman in 2.5 years or longer, but are installing
 new packages, you will see errors like this, due to a format change in the
